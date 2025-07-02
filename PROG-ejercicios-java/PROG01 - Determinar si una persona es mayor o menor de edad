@@ -1,0 +1,15 @@
+package com.mycompany.prog02_ejerc4;
+
+/**
+ *
+ * @author David García
+ */
+public class PROG02_Ejerc4 {
+
+    public static void main(String[] args) {
+        int edad = 17;
+       String mayedad = edad >=18? "mayor":"menor";
+
+        System.out.println("La persona es " + mayedad + " de edad.");
+    }
+}
