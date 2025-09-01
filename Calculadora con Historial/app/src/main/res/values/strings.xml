@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="atras">Atras</string>
+    <string name="todo">TODO</string>
+    <string name="calculadora_con_historial">CALCULADORA CON HISTORIAL</string>
+    <string name="abrir_calculadora">Abrir calculadora</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="nombre">David García Pérez</string>
+    <string name="estudios">Programación Multimedia y Dispositivos Móviles</string>
+    <string name="fondo">fondo</string>
+    <string name="calculadora">CALCULADORA</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="mas">+</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="menos">-</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="mult">*</string>
+    <string name="borrar">C/A</string>
+    <string name="_0">0</string>
+    <string name="igual">=</string>
+    <string name="division">/</string>
+    <string name="atras_calc">Atras</string>
+    <string name="historial">Historial</string>
+</resources>
