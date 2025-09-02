@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Lista -->
+    <record id="view_agenda_tree" model="ir.ui.view">
+        <field name="name">agenda.tree</field>
+        <field name="model">agenda.telefonica</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>   <!-- Cambiado de "nombre" a "name" -->
+                <field name="phone"/>  <!-- Cambiado de "telefono" a "phone" -->
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Formulario -->
+    <record id="view_agenda_form" model="ir.ui.view">
+        <field name="name">agenda.form</field>
+        <field name="model">agenda.telefonica</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>   <!-- Cambiado de "nombre" a "name" -->
+                        <field name="phone"/>  <!-- Cambiado de "telefono" a "phone" -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- Acción y Menú (correcto) -->
+    <record id="action_agenda" model="ir.actions.act_window">
+        <field name="name">Agenda Telefónica</field>
+        <field name="res_model">agenda.telefonica</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="agenda_telefonica.menu_agenda_root" name="Agenda Telefónica" sequence="10"/>
+    <menuitem id="agenda_telefonica.menu_agenda_contactos" name="Contactos" parent="agenda_telefonica.menu_agenda_root" action="agenda_telefonica.action_agenda"/>
+</odoo>
