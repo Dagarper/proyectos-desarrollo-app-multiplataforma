@@ -1,0 +1,4 @@
+nombre=1, apellidos=1, DNI=1 ES12345678901234567890
+nombre=2, apellidos=2, DNI=2 ES12345678912345678900
+nombre=David, apellidos=Garcia Perez, DNI=45130311X ES12345678912345678912
+Numero de cuentas: 3
