@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DAM/DAM.iml" filepath="$PROJECT_DIR$/DAM/DAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyectos-desarrollo-app-multiplataforma.iml" filepath="$PROJECT_DIR$/proyectos-desarrollo-app-multiplataforma.iml" />
+    </modules>
+  </component>
+</project>
