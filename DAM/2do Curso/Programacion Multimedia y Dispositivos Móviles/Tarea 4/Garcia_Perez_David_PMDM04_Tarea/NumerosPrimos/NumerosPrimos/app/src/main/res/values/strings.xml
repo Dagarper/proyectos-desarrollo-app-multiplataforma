@@ -1,0 +1,32 @@
+<resources>
+        <!-- Nombre de la aplicación -->
+        <string name="app_name">Calculadora de Números Primos</string>
+
+        <!-- Título principal de la aplicación -->
+        <string name="titulo">Calculadora de números primos:</string>
+
+        <!-- Instrucciones para el usuario -->
+        <string name="instrucciones">
+        Introduce qué número primo quieres calcular.
+        Por ejemplo, si deseas saber el sexto número primo,
+        pon el número 6 y dale a calcular. Te dirá que el sexto número primo es el 11.
+        </string>
+
+        <!-- Etiqueta para el campo de posición -->
+        <string name="posicion">Posición:</string>
+
+        <!-- Texto del botón de calcular -->
+        <string name="calcular">Calcular!</string>
+
+        <!-- Mensaje de resultado formateado dinámicamente -->
+        <!-- %1$d y %2$d son marcadores para enteros que serán reemplazados en tiempo de ejecución -->
+        <string name="resultado">El primo número %1$d es el %2$d</string>
+
+        <!-- Mensaje de error para entradas no válidas -->
+        <string name="error_invalid_input">Por favor, introduce un número entero positivo válido.</string>
+
+        <!-- Mensaje de error para números demasiado grandes -->
+        <string name="error_large_number">
+        El número es demasiado grande, prueba con un valor menor a 1,000,000.
+    </string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3F51B5"
+            android:text="INSTRUCCIONES"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="21dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Al abrir esta aplicación dispondrás de una pantalla en la que podrás seleccionar un continente (Europa, Asia, África, América, Oceanía). Al seleccionar uno de esos elementos se abrirá una nueva pantalla que mostrará la información de este continente. Para ir a la pantalla anterior pulsar el botón 'Volver'" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="En la pantalla del continente elegido se incluyen 3 países que pertenecen a este. Estos pueden ser seleccionados,  y tras dar al botón 'Ver paises' se mostrará en una nueva pantalla la imagen del mapa de aquellos que se han seleccionados.  Para ir a la pantalla anterior pulsar el botón 'Volver'" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="425dp" />
+
+        <Button
+            android:id="@+id/btnVolverInst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:text="Volver" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

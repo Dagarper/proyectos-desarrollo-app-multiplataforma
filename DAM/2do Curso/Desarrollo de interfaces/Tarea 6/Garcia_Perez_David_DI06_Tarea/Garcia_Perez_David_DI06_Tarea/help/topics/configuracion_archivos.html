@@ -1,0 +1,36 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuración de Archivos</title>
+</head>
+<body>
+    <h1>Configuración de Archivos de Mapa</h1>
+    <p>JavaHelp utiliza varios archivos XML para estructurar la ayuda:</p>
+
+    <h2>1. Archivo `map_file.jhm`</h2>
+    <p>Define la correspondencia entre identificadores y archivos HTML:</p>
+    <pre>
+&lt;map version="2.0"&gt;
+    &lt;mapID target="introduccion" url="topics/introduccion.html"/&gt;
+    &lt;mapID target="instalacion" url="topics/instalacion.html"/&gt;
+&lt;/map&gt;
+    </pre>
+
+    <h2>2. Archivo `toc.xml`</h2>
+    <p>Define la tabla de contenidos:</p>
+    <pre>
+&lt;toc version="2.0"&gt;
+    &lt;tocitem text="Introducción" target="introduccion"/&gt;
+    &lt;tocitem text="Instalación" target="instalacion"/&gt;
+&lt;/toc&gt;
+    </pre>
+
+    <h2>3. Archivo `index.xml`</h2>
+    <p>Define los términos para el índice:</p>
+    <pre>
+&lt;index version="2.0"&gt;
+    &lt;indexitem text="Introducción" target="introduccion"/&gt;
+&lt;/index&gt;
+    </pre>
+</body>
+</html>

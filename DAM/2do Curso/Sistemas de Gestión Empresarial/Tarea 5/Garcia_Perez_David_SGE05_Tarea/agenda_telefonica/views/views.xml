@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Lista -->
+    <record id="view_agenda_contacto_tree" model="ir.ui.view">
+        <field name="name">agenda.contacto.tree</field>
+        <field name="model">agenda.contacto</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="telefono"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Formulario -->
+    <record id="view_agenda_contacto_form" model="ir.ui.view">
+        <field name="name">agenda.contacto.form</field>
+        <field name="model">agenda.contacto</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción y Menú -->
+    <record id="action_agenda_contacto" model="ir.actions.act_window">
+        <field name="name">Contactos Telefónicos</field>
+        <field name="res_model">agenda.contacto</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_agenda_principal" name="Agenda" sequence="10"/>
+    <menuitem id="menu_agenda_contactos" name="Contactos" parent="menu_agenda_principal" action="action_agenda_contacto"/>
+</odoo>

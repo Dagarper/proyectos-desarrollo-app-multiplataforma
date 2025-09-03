@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b4b4ee5-e9ca-4e37-8361-f84a4506cc85">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID_Cliente" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT c.Nombre, c.Direccion, c.Ciudad, p.ID_Pedido, p.Fecha_Pedido, (pd.Unidades * pd.Precio) AS "importe_a_pagar"
+
+FROM clientes c INNER JOIN pedidos p ON c.ID_Cliente = p.ID_Cliente INNER JOIN detalle_pedidos pd ON p.ID_pedido = pd.ID_pedido
+
+ORDER BY 
+c.Nombre ASC,
+p.ID_pedido ASC]]>
+	</queryString>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_Pedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha_Pedido" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="importe_a_pagar" class="java.math.BigDecimal"/>
+	<variable name="importe_a_pagar_1" class="java.math.BigDecimal" resetType="Group" resetGroup="Pedidos" calculation="Sum">
+		<variableExpression><![CDATA[$F{importe_a_pagar}]]></variableExpression>
+	</variable>
+	<variable name="importe_a_pagar_2" class="java.math.BigDecimal" resetType="Group" resetGroup="Empresa" calculation="Sum">
+		<variableExpression><![CDATA[$F{importe_a_pagar}]]></variableExpression>
+	</variable>
+	<group name="Nombre">
+		<groupExpression><![CDATA[$F{Nombre}]]></groupExpression>
+	</group>
+	<group name="Empresa">
+		<groupExpression><![CDATA[$F{Nombre}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement x="0" y="29" width="180" height="20" uuid="52c3a0ed-d971-4776-a855-9d206294314b"/>
+					<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="180" y="29" width="193" height="20" uuid="89e2c7eb-fc01-494c-84bb-51aff1ffc920"/>
+					<textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="373" y="30" width="182" height="20" uuid="8b108d9e-4553-4fe3-ac7f-166afcc90d50"/>
+					<textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="10" width="40" height="20" uuid="e9730460-8315-46e9-bfb2-6eb59ce352b7"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="10" width="46" height="20" uuid="d222afef-aaf2-4a44-8b51-b084a5f2da94"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dirección]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="373" y="10" width="37" height="20" uuid="77296a1f-e2a7-48d8-aa3d-43264ae9dde7"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ciudad]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="37">
+				<textField>
+					<reportElement x="455" y="12" width="100" height="20" forecolor="#CC0000" uuid="9e8f3aec-a79a-4300-b7e7-5b5aac8ec5b4"/>
+					<textFieldExpression><![CDATA[$V{importe_a_pagar_2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="420" y="12" width="35" height="20" forecolor="#CC0000" uuid="0b37ffc9-7973-4069-ad9f-33ad96927a83"/>
+					<text><![CDATA[Total:]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Pedidos">
+		<groupExpression><![CDATA[$F{ID_Pedido}]]></groupExpression>
+		<groupHeader>
+			<band height="9"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="50">
+				<textField>
+					<reportElement x="180" y="30" width="100" height="20" uuid="4c5cbce6-c9a2-4c08-9afc-4ac5fd8d792f"/>
+					<textFieldExpression><![CDATA[$F{ID_Pedido}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="280" y="30" width="110" height="20" uuid="03662688-2c0b-4158-a32c-131b5eef08a6"/>
+					<textFieldExpression><![CDATA[$F{Fecha_Pedido}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="390" y="30" width="100" height="20" uuid="a0783ead-b865-4d0d-b48f-992345e2d23e"/>
+					<textFieldExpression><![CDATA[$V{importe_a_pagar_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="180" y="10" width="100" height="20" uuid="7532b32a-aec8-45c9-939a-ba144c2479ef"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[ID de Pedido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="280" y="10" width="100" height="20" uuid="4692b1d5-31e3-4920-a5e0-348fc5cd90bd"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha del pedido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="390" y="10" width="100" height="20" uuid="80abf8a0-4448-43c9-9afb-2945deb661be"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Importe]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="153" y="17" width="250" height="47" uuid="58ab694c-ae9d-4ac0-be21-ed241d7baea0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUMIMETALICOS S.A.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="438" y="34" width="80" height="20" uuid="2b399518-2166-4cde-b4a5-5fef79f8c36f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="518" y="34" width="40" height="20" uuid="95683e23-1a43-4732-aa7e-65a127ce71e4"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<map>
+    <mapID target="introduccion" url="topics/introduccion.html" />
+    <mapID target="instalacion" url="topics/instalacion.html" />
+    <mapID target="creacion_contenido" url="topics/creacion_contenido.html" />
+    <mapID target="configuracion_archivos" url="topics/configuracion_archivos.html" />
+    <mapID target="integracion" url="topics/integracion.html" />
+</map>

@@ -1,0 +1,33 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Integración en Aplicaciones</title>
+</head>
+<body>
+    <h1>Integración de JavaHelp en Aplicaciones Java</h1>
+    <p>Para usar JavaHelp en una aplicación Java, sigue estos pasos:</p>
+
+    <h2>1. Importa las clases necesarias</h2>
+    <pre>
+import javax.help.HelpBroker;
+import javax.help.HelpSet;
+import javax.help.HelpSetException;
+    </pre>
+
+    <h2>2. Carga el sistema de ayuda</h2>
+    <pre>
+try {
+    ClassLoader cl = getClass().getClassLoader();
+    URL hsURL = HelpSet.findHelpSet(cl, "help/help_set.hs");
+    HelpSet helpSet = new HelpSet(cl, hsURL);
+    HelpBroker helpBroker = helpSet.createHelpBroker();
+    helpBroker.enableHelpOnButton(button, "introduccion", helpSet);
+} catch (HelpSetException e) {
+    e.printStackTrace();
+}
+    </pre>
+
+    <h2>3. Asocia un botón para abrir la ayuda</h2>
+    <p>Utiliza `helpBroker.enableHelpOnButton(...)` para asociar un botón con la ayuda.</p>
+</body>
+</html>

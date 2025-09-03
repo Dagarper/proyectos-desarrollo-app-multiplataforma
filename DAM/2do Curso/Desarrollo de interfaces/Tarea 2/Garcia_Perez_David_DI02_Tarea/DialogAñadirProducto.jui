@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" language="jambi">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>592</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Añadir Producto</string>
+  </property>
+  <widget class="QPushButton" name="btnAceptar">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>380</y>
+     <width>112</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aceptar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancelar">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>380</y>
+     <width>112</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNombreProducto">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>100</y>
+     <width>311</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string>Introduzca el nombre del producto</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxCantidad">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>160</y>
+     <width>54</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxSeccion">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>220</y>
+     <width>251</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Panadería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pescadería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Frutería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Carnicería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Charcutería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Conservas</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Perfumería</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>General</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QRadioButton" name="radioButtonUrgenteSi">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>280</y>
+     <width>124</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Si</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroupUrgente</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="radioButtonUrgenteNo">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>280</y>
+     <width>124</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroupUrgente</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>90</y>
+     <width>163</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="labelNombreProducto_3">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Nombre del producto:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelCantidad_3">
+      <property name="text">
+       <string>Cantidad:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelSeccion">
+      <property name="text">
+       <string>Seccion:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelUrgente">
+      <property name="text">
+       <string>¿Es urgente?</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroupUrgente"/>
+ </buttongroups>
+</ui>
+

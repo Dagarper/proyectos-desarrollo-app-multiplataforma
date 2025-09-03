@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Diseño principal de la actividad utilizando ConstraintLayout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor vertical para organizar los elementos en orden -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Título principal de la aplicación -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/titulo"
+            android:textSize="18sp" />
+
+        <!-- Texto de instrucciones para el usuario -->
+        <TextView
+            android:id="@+id/instrucciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/instrucciones"
+            android:textSize="16sp" />
+
+        <!-- Campo de entrada para la posición del número primo -->
+        <EditText
+            android:id="@+id/etPosicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/posicion"
+            android:inputType="number"
+            android:maxLength="6" />         <!-- Limita la longitud a 6 dígitos -->
+
+        <!-- Botón para calcular el número primo -->
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/calcular" />
+
+        <!-- TextView donde se mostrará el resultado del cálculo -->
+        <TextView
+            android:id="@+id/Resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

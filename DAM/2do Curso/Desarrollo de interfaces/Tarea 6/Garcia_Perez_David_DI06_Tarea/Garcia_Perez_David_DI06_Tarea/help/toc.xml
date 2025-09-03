@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<toc version="1.0">
+    <tocitem text="Ayuda con JavaHelp" target="aplicacion">
+        <tocitem text="Introducción" target="introduccion"/>
+        <tocitem text="Instalación" target="instalacion"/>
+        <tocitem text="Creación de Contenido" target="creacion_contenido"/>
+        <tocitem text="Configuración de Archivos" target="configuracion_archivos"/>
+        <tocitem text="Integración en Aplicaciones" target="integracion"/>
+    </tocitem>
+</toc>
