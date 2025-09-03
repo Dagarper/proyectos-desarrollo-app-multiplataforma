@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda>
+  <agenda>
+      <identificacion>
+         <nombre>David</nombre>
+         <apellido>García</apellido>
+      </identificacion>
+      <direccion>
+         <calle>Avenida Filiberto</calle>
+         <numero>57</numero>
+         <piso>2</piso>
+         <letra>A</letra>
+         <localidad>Salamanca</localidad>
+         <codigopostal>37007</codigopostal>
+      </direccion>
+      <telefonos>
+         <telcasa>923000000</telcasa>
+         <telmovil>622000000</telmovil>
+         <teltrabajo>923000001</teltrabajo>
+      </telefonos>
+  </agenda>

@@ -1,0 +1,31 @@
+CREATE TABLE FAMILIA( 
+Codfamilia NUMBER(3) PRIMARY KEY, 
+Denofamilia VARCHAR(5) UNIQUE NOT NULL);
+
+CREATE TABLE PRODUCTO(
+Codproducto NUMBER(5) PRIMARY KEY,
+Denoproducto VARCHAR(20) NOT NULL,
+Descripcion VARCHAR(100),
+PrecioBase NUMBER(8) CHECK (PrecioBase > 0) NOT NULL,
+PorcReposicion NUMBER(3) CHECK (PorcReposicion > 0),
+UnidadesMinimas NUMBER(4) CHECK(UnidadesMinimas > 0) NOT NULL,
+Codfamilia NUMBER(3) 
+REFERENCES FAMILIA(Codfamilia) NOT NULL
+);
+
+CREATE TABLE TIENDA(
+Codtienda NUMBER(3) PRIMARY KEY,
+Denotienda VARCHAR(20) NOT NULL,
+Telefono VARCHAR(11),
+CodigoPostal VARCHAR(5) NOT NULL,
+Provincia VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE STOCK(
+Codtienda NUMBER(3) REFERENCES TIENDA(Codtienda) NOT NULL,
+Codproducto NUMBER(5) REFERENCES PRODUCTO(Codproducto) NOT NULL,
+CONSTRAINT Tienda_Prod_PK PRIMARY KEY (Codtienda, Codproducto) ,
+CONSTRAINT Tienda_FK FOREIGN KEY Codtienda REFERENCES TIENDA(Codtienda)
+CONSTRAINT Prod_FK FOREIGN KEY Codproducto REFERENCES PRODUCTO(Codproducto),
+Unidades NUMBER(6) CHECK (NUMBER >= 0) 
+);

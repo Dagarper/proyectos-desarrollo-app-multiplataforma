@@ -1,0 +1,20 @@
+<!-- Elemento raiz torneo, que consta de 1 o más participantes-->
+<!ELEMENT torneo (participante+)>
+<!-- Atributo perteneciente al elemento torneo con nombre edicion de tipo cadena de texto y de caracter obligatorio-->
+<!ATTLIST torneo edicion CDATA #REQUIRED>
+<!-- Atributo perteneciente al elemento torneo con nombre anteriorGanador de tipo referencia a identificador y de caracter obligatorio-->
+<!ATTLIST torneo anteriorGanador IDREF #REQUIRED>
+<!-- Elemento participante, que consta de los elementos nombre, edad, pais y cabezaDeSerie, este último de caracter opcional-->
+<!ELEMENT participante (nombre, edad, pais, cabezaDeSerie?)>
+<!-- Atributo perteneciente al elemento participante con nombre idp de tipo identificador y de caracter obligatorio-->
+<!ATTLIST participante idP ID #REQUIRED>
+<!-- Atributo perteneciente al elemento participante con nombre pareja de tipo referencia a identificador y de caracter obligatorio-->
+<!ATTLIST participante pareja IDREF #REQUIRED>
+<!-- Elemento nombre, no contiene elementos solo datos de tipo caracter-->
+<!ELEMENT nombre (#PCDATA)>
+<!-- Elemento edad, no contiene elementos solo datos de tipo caracter-->
+<!ELEMENT edad (#PCDATA)>
+<!-- Elemento pais, no contiene elementos solo datos de tipo caracter-->
+<!ELEMENT pais (#PCDATA)>
+<!-- Elemento edad, no contenedor de datos-->
+<!ELEMENT cabezaDeSerie EMPTY>

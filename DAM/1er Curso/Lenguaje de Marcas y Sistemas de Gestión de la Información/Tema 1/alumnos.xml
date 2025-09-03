@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<curso ciclo_formativo="DAM"> 
+   <modulo nombre="Lenguajes de Marcas y Sistemas de Gestión de la Información" caracter="Obligatorio" horas_semanales="4"/>
+      <fecha_inicio> "15 de septiembre de 2010"</fecha_inicio>
+      <fecha_final> "30 de junio de 2011" </fecha_final>
+   <alumnos>
+      <ficha_alumno nombre="Ana" apellido1="Fernández" apellido2="Gutiérrez"/>
+         <nif>16965696L </nif>
+	 <telefono>789654321</telefono>
+	 <email>ana.fdezgtrrez@hotmail.com</email>
+	 <dirección calle="C/ El Percebe" numero="13" localidad="Santander" cp="39302"/>
+	 <faltas_asistencia> No hay información </faltas_asistencia>
+	 <notas> No hay información </notas>
+      <ficha_alumno nombre="Pepito" apellido1="Grillo" apellido2=""/>
+	 <nif>98765432H</nif>
+	 <telefono>656566555</telefono>
+	 <email>yhyh@yahoo.com</email>
+	 <dirección calle="Avd. El Pez" numero="5" localidad="Suances" cp="39401"/>
+	 <faltas_asistencia> Sin faltas </faltas_asistencia>
+	 <notas> Apto </notas>
+   </alumnos>
+</curso>
+<!-- Comentario: Este es un fichero XML que contiene información sobre un curso de formación, incluyendo detalles del curso y una lista de alumnos con sus datos personales. -->

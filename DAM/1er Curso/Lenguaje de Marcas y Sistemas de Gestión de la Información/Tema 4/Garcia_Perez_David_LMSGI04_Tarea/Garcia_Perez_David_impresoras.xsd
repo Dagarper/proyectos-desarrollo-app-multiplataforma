@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+  <!-- Elemento impresoras -->
+	<xsd:element name = "impresoras">
+  		<!-- Tipo complejo, ya que contiene otros elementos -->
+		<xsd:complexType>
+		 <!-- Secuencia, permite la enumeracion de los elementos que forman el elemento impresoras -->
+			<xsd:sequence>
+				  <!-- Elemento impresora, aparece como mínimo 1 vez y como máximo de manera indeterminada. -->
+				<xsd:element name = "impresora" minOccurs = "1" maxOccurs = "unbounded"> 
+					<!-- Tipo complejo, ya que contiene otros elementos -->
+					<xsd:complexType>
+						<!-- Secuencia, permite la enumeracion de los elementos que forman el elemento impresora -->
+						<xsd:sequence>
+							<!-- Elemento marca de tipo cadena de texto -->
+							<xsd:element name = "marca" type="xsd:string"/>
+							<!-- Elemento modelo de tipo cadena de texto -->
+							<xsd:element name = "modelo" type="xsd:string"/>
+							<!-- Elemento peso de tipo simple, con restriccion de base decimal con un valor positivo(mínimo 0 exclusivo) y puede contener dos decimales-->
+							<xsd:element name = "peso">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:decimal">
+										<xsd:minExclusive value = "0"/>
+										<xsd:fractionDigits value = "2"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<!-- Elemento tamaño de tipo cadena de texto, puede ocurrir un número indeterminado de veces -->
+							<xsd:element name = "tamaño" maxOccurs="unbounded" type="xsd:string"/>	
+							<!-- Elemento cartucho de tipo simple, con restriccion de base cadena de texto, comienzza por "C-" un número de 3 dígitos y una o 2 letras mayúsculas-->	
+							<xsd:element name = "cartucho">
+								<xsd:simpleType>
+									<xsd:restriction base ="xsd:string">
+										<xsd:pattern value ="C-[0-9]{3}[A-Z]{1,2}"/>
+									</xsd:restriction>
+								</xsd:simpleType>	
+							</xsd:element>
+							<!-- Elemento enred de caracter opcional y si aparece se encuentra vacío-->
+							<xsd:element name="enred" minOccurs="0"/>
+						</xsd:sequence>
+					<!-- Atributo numSerie de tipo identificador único y de caracter obligatorio -->
+					<xsd:attribute name="numSerie" type="xsd:ID" use="required"/>
+					<!-- Atributo tipo de caracter obligatorio, es de tipo simple, tiene restriccion de base string, puede tener los valores de: matricial, láser o tinta. -->
+					<xsd:attribute name="tipo" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="matricial"/>
+								<xsd:enumeration value="láser"/>
+								<xsd:enumeration value="tinta"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>	
+					<!-- Atributo tipo de caracter obligatorio, es de tipo simple, tiene restriccion de base positiveInteger, indicando que tiene que ser un número positivo. -->
+					<xsd:attribute name="compra" use="optional">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:positiveInteger"/>
+						</xsd:simpleType>
+					</xsd:attribute>	
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>	
+	</xsd:element>
+</xsd:schema>	
+
+
